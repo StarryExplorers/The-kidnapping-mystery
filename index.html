@@ -147,20 +147,22 @@
       setTimeout(() => document.getElementById("line11").classList.add("visible"), 8000);
     }
 
-    <!-- SCENE 4 -->
+    <!-- ...all previous HTML stays the same -->
+
+<!-- SCENE 4 -->
 <div id="scene4" class="hidden">
-  <div id="line12" class="scene">🏚️ Abandoned Warehouse – Pine Grove Street</div>
-  <div id="line13" class="scene">Alex: "This is it... the van is outside. They’re here."</div>
-  <div id="line14" class="scene">Jordan: "Stay alert. They might be armed."</div>
-  <div id="line15" class="scene">🔦 *They sneak inside... the place is silent.*</div>
-  <div id="line16" class="scene">Mia: "Wait... this was staged. Look—those crates are empty!"</div>
-  <div id="line17" class="scene">Alex: "They ditched the hideout minutes ago. We were too late."</div>
-  <div id="line18" class="scene">🧩 But in the corner, something catches Jordan's eye — a dropped phone.</div>
-  <div id="line19" class="scene">Jordan: "They were in a rush. This might be our way in."</div>
-  <button class="next-btn" onclick="alert('Scene 5 coming next!')">Next Scene ▶️</button>
+  <div id="line12" class="scene">🏚️ Abandoned Factory — 5:47 PM</div>
+  <div id="line13" class="scene">Antel Briggs: "Get the girl inside. We're not staying here long."</div>
+  <div id="line14" class="scene">Tori (gang member): "Someone's at the gate!"</div>
+  <div id="line15" class="scene">💥💡 Suddenly, floodlights burst on. Police surround the hideout.</div>
+  <div id="line16" class="scene">Alex (through megaphone): "We know you're in there, Antel. Step out now!"</div>
+  <div id="line17" class="scene">Antel: "They tracked us?! Tori, Leo — cover the back!"</div>
+  <button class="next-btn" onclick="alert('Scene 5 loading soon!')">Next Scene ▶️</button>
 </div>
 
 <script>
+  // already defined: showScene2 and showScene3
+
   function showScene4() {
     document.getElementById("scene3").classList.add("hidden");
     document.getElementById("scene4").classList.remove("hidden");
@@ -168,12 +170,16 @@
     setTimeout(() => document.getElementById("line12").classList.add("visible"), 1000);
     setTimeout(() => document.getElementById("line13").classList.add("visible"), 2500);
     setTimeout(() => document.getElementById("line14").classList.add("visible"), 4000);
-    setTimeout(() => document.getElementById("line15").classList.add("visible"), 5200);
-    setTimeout(() => document.getElementById("line16").classList.add("visible"), 6600);
-    setTimeout(() => document.getElementById("line17").classList.add("visible"), 8000);
-    setTimeout(() => document.getElementById("line18").classList.add("visible"), 9200);
-    setTimeout(() => document.getElementById("line19").classList.add("visible"), 10400);
+    setTimeout(() => document.getElementById("line15").classList.add("visible"), 5500);
+    setTimeout(() => document.getElementById("line16").classList.add("visible"), 7000);
+    setTimeout(() => document.getElementById("line17").classList.add("visible"), 8500);
   }
+
+  // modify scene 3's button to showScene4
+  document.querySelector("#scene3 button").setAttribute("onclick", "showScene4()");
+</script>
+
+<!-- end of body and html stays the same -->
 </script>
   </script>
 </body>
