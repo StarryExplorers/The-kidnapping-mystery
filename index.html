@@ -2,185 +2,136 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>The Vanishing Trail - Scenes 1 to 3</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>City Squad Chronicles 🎬</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: black;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
       color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      min-height: 100vh;
-      overflow-x: hidden;
+      margin: 0;
+      padding: 2rem;
       text-align: center;
-      padding: 1rem;
     }
-
-    .alert {
-      font-size: 2rem;
-      padding: 1rem 2rem;
-      border: 3px solid red;
-      animation: flash 1s infinite alternate;
-      margin-bottom: 2rem;
-    }
-
-    @keyframes flash {
-      0% { background: red; color: white; }
-      100% { background: black; color: red; }
-    }
-
     .scene {
-      max-width: 700px;
+      margin: 1rem auto;
       font-size: 1.3rem;
       opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.8s ease;
-      margin-bottom: 1rem;
+      transition: opacity 0.6s ease-in;
     }
-
     .visible {
       opacity: 1;
-      transform: translateY(0);
     }
-
-    .next-btn {
-      margin-top: 2rem;
-      padding: 1rem 2rem;
-      background: #1e3a8a;
-      color: white;
-      border: none;
-      border-radius: 0.7rem;
-      font-size: 1rem;
-      cursor: pointer;
-      display: none;
-    }
-
     .hidden {
       display: none;
     }
-
-    .camera-feed {
-      width: 90%;
-      max-width: 500px;
-      border: 4px solid #00bcd4;
-      border-radius: 1rem;
-      margin: 1rem 0;
-      box-shadow: 0 0 15px #00bcd4;
-      opacity: 0;
-      transition: opacity 1s ease;
-    }
-
-    .camera-feed.visible {
-      opacity: 1;
-    }
-
-    .car-chase {
-      width: 90%;
-      max-width: 500px;
-      border-radius: 1rem;
-      margin: 1rem 0;
-      box-shadow: 0 0 20px #ff9800;
+    .next-btn {
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      background-color: #5a67d8;
+      color: white;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <!-- SCENE 1 -->
+  <h1>🎥 City Squad Chronicles: The Case of the Missing Kid</h1>
+
+  <!-- Scene 1 -->
   <div id="scene1">
-    <div class="alert">🚨 POLICE ALERT 🚨</div>
-    <div id="line1" class="scene">KIDNAPPING REPORTED — CASE 447<br>The mayor’s daughter is missing.</div>
-    <div id="line2" class="scene">Detective Alex: "Another case... and this one's personal."</div>
-    <button id="next1" class="next-btn" onclick="showScene2()">Next Scene ▶️</button>
+    <div id="line1" class="scene">🌆 Downtown — 5:15 PM</div>
+    <div id="line2" class="scene">🚓 Officer Sam: "Reports of a missing kid near 5th Avenue! Alex, Mia — you're with me!"</div>
+    <div id="line3" class="scene">🧑‍💼 Alex: "I’ll check the alley. Mia, you cover the playground."</div>
+    <div id="line4" class="scene">👮‍♀️ Mia: "Got it. Let’s move fast — time matters!"</div>
+    <button class="next-btn" onclick="showScene2()">Next Scene ▶️</button>
   </div>
 
-  <!-- SCENE 2 -->
+  <!-- Scene 2 -->
   <div id="scene2" class="hidden">
-    <div id="line3" class="scene">📍 CCTV Room, Police HQ</div>
-    <div id="line4" class="scene">Tech Officer Mia: "Let me pull up the footage from Main Street at 3:12 PM."</div>
-    <img id="camFeed" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Surveillance_video_camera.jpg/640px-Surveillance_video_camera.jpg" alt="CCTV Feed" class="camera-feed" />
-    <div id="line5" class="scene">Detective Jordan: "Zoom in on that van... right there!"</div>
-    <div id="line6" class="scene">Mia: "That license plate... it’s registered to Antel Briggs."</div>
-    <button id="next2" class="next-btn" onclick="showScene3()">Next Scene ▶️</button>
+    <div id="line5" class="scene">👧 At the playground...</div>
+    <div id="line6" class="scene">Mia: "No sign of Ellie. But this teddy bear… looks dropped in a hurry."</div>
+    <div id="line7" class="scene">Alex (on radio): "Found footprints heading east. Could be something."</div>
+    <div id="line8" class="scene">Sam: "Let’s follow it. Fast."</div>
+    <button class="next-btn" onclick="showScene3()">Next Scene ▶️</button>
   </div>
 
-  <!-- SCENE 3 -->
+  <!-- Scene 3 -->
   <div id="scene3" class="hidden">
-    <div id="line7" class="scene">🚔 Police Cruiser – In Pursuit</div>
-    <div id="line8" class="scene">Alex: "Team, he’s on Highway 7 — let’s move!"</div>
-    <img id="chaseImg" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Police_car_pursuit.jpg" alt="Car Chase" class="car-chase" />
-    <div id="line9" class="scene">Jordan: "The tracker says he just turned onto Pine Grove Street!"</div>
-    <div id="line10" class="scene">Mia: "Satellite ping confirms it. He’s speeding — 120 km/h."</div>
-    <div id="line11" class="scene">Alex: "He knows we’re onto him. He’s running."</div>
-    <button class="next-btn" onclick="alert('Scene 4 coming next!')">Next Scene ▶️</button>
+    <div id="line9" class="scene">🔍 A few blocks away — 5:32 PM</div>
+    <div id="line10" class="scene">👀 Sam: "Security cam spotted a van speeding off. Plate ends in 42D."</div>
+    <div id="line11" class="scene">Alex: "Running the plate... registered to a warehouse near the docks."</div>
+    <div id="line12" class="scene">Mia: "Let’s roll. Ellie might be inside!"</div>
+    <button class="next-btn" onclick="showScene4()">Next Scene ▶️</button>
+  </div>
+
+  <!-- Scene 4 -->
+  <div id="scene4" class="hidden">
+    <div id="line13" class="scene">🏭 Abandoned Factory — 5:45 PM</div>
+    <div id="line14" class="scene">🚪 Alex: "Door's locked. Ready to breach?"</div>
+    <div id="line15" class="scene">Sam: "On my count... 3... 2... 1... Go!"</div>
+    <div id="line16" class="scene">💥 CRASH! The door flies open!</div>
+    <div id="line17" class="scene">Mia: "I hear something upstairs — sounds like a child!"</div>
+    <button class="next-btn" onclick="showScene5()">Next Scene ▶️</button>
+  </div>
+
+  <!-- Scene 5 -->
+  <div id="scene5" class="hidden">
+    <div id="line18" class="scene">🔫 Inside the Factory — 5:49 PM</div>
+    <div id="line19" class="scene">Tori: "They're breaking in! What do we do?!"</div>
+    <div id="line20" class="scene">Leo: "We hold them off! Grab the kid!"</div>
+    <div id="line21" class="scene">Sam: "Freeze! Drop your weapons!"</div>
+    <div id="line22" class="scene">💥 Antel tries to escape through the back but gets tackled by Alex.</div>
+    <div id="line23" class="scene">👧 Ellie: "Are you the police?"</div>
+    <div id="line24" class="scene">Sam (smiling): "You're safe now, Ellie. Let's take you home."</div>
+    <div id="line25" class="scene">📢 Chief Ramirez: "Good work, team. Case closed."</div>
+    <div id="line26" class="scene">🎉 The squad heads back, another mystery solved.</div>
+    <div id="line27" class="scene">👊 The end... or is it?</div>
   </div>
 
   <script>
-    // Scene 1
-    setTimeout(() => document.getElementById("line1").classList.add("visible"), 1500);
-    setTimeout(() => document.getElementById("line2").classList.add("visible"), 4000);
-    setTimeout(() => document.getElementById("next1").style.display = "inline-block", 6000);
-
     function showScene2() {
       document.getElementById("scene1").classList.add("hidden");
       document.getElementById("scene2").classList.remove("hidden");
-
-      setTimeout(() => document.getElementById("line3").classList.add("visible"), 1000);
-      setTimeout(() => document.getElementById("line4").classList.add("visible"), 2500);
-      setTimeout(() => document.getElementById("camFeed").classList.add("visible"), 4000);
-      setTimeout(() => document.getElementById("line5").classList.add("visible"), 6000);
-      setTimeout(() => document.getElementById("line6").classList.add("visible"), 7500);
-      setTimeout(() => document.getElementById("next2").style.display = "inline-block", 9000);
+      setTimeout(() => document.getElementById("line5").classList.add("visible"), 1000);
+      setTimeout(() => document.getElementById("line6").classList.add("visible"), 2500);
+      setTimeout(() => document.getElementById("line7").classList.add("visible"), 4000);
+      setTimeout(() => document.getElementById("line8").classList.add("visible"), 5500);
     }
-
     function showScene3() {
       document.getElementById("scene2").classList.add("hidden");
       document.getElementById("scene3").classList.remove("hidden");
-
-      setTimeout(() => document.getElementById("line7").classList.add("visible"), 1000);
-      setTimeout(() => document.getElementById("line8").classList.add("visible"), 2500);
-      setTimeout(() => document.getElementById("chaseImg").classList.add("visible"), 3500);
-      setTimeout(() => document.getElementById("line9").classList.add("visible"), 5000);
-      setTimeout(() => document.getElementById("line10").classList.add("visible"), 6500);
-      setTimeout(() => document.getElementById("line11").classList.add("visible"), 8000);
+      setTimeout(() => document.getElementById("line9").classList.add("visible"), 1000);
+      setTimeout(() => document.getElementById("line10").classList.add("visible"), 2500);
+      setTimeout(() => document.getElementById("line11").classList.add("visible"), 4000);
+      setTimeout(() => document.getElementById("line12").classList.add("visible"), 5500);
     }
-
-    <!-- ...all previous HTML stays the same -->
-
-<!-- SCENE 4 -->
-<div id="scene4" class="hidden">
-  <div id="line12" class="scene">🏚️ Abandoned Factory — 5:47 PM</div>
-  <div id="line13" class="scene">Antel Briggs: "Get the girl inside. We're not staying here long."</div>
-  <div id="line14" class="scene">Tori (gang member): "Someone's at the gate!"</div>
-  <div id="line15" class="scene">💥💡 Suddenly, floodlights burst on. Police surround the hideout.</div>
-  <div id="line16" class="scene">Alex (through megaphone): "We know you're in there, Antel. Step out now!"</div>
-  <div id="line17" class="scene">Antel: "They tracked us?! Tori, Leo — cover the back!"</div>
-  <button class="next-btn" onclick="alert('Scene 5 loading soon!')">Next Scene ▶️</button>
-</div>
-
-<script>
-  // already defined: showScene2 and showScene3
-
-  function showScene4() {
-    document.getElementById("scene3").classList.add("hidden");
-    document.getElementById("scene4").classList.remove("hidden");
-
-    setTimeout(() => document.getElementById("line12").classList.add("visible"), 1000);
-    setTimeout(() => document.getElementById("line13").classList.add("visible"), 2500);
-    setTimeout(() => document.getElementById("line14").classList.add("visible"), 4000);
-    setTimeout(() => document.getElementById("line15").classList.add("visible"), 5500);
-    setTimeout(() => document.getElementById("line16").classList.add("visible"), 7000);
-    setTimeout(() => document.getElementById("line17").classList.add("visible"), 8500);
-  }
-
-  // modify scene 3's button to showScene4
-  document.querySelector("#scene3 button").setAttribute("onclick", "showScene4()");
-</script>
-
-<!-- end of body and html stays the same -->
-</script>
+    function showScene4() {
+      document.getElementById("scene3").classList.add("hidden");
+      document.getElementById("scene4").classList.remove("hidden");
+      setTimeout(() => document.getElementById("line13").classList.add("visible"), 1000);
+      setTimeout(() => document.getElementById("line14").classList.add("visible"), 2500);
+      setTimeout(() => document.getElementById("line15").classList.add("visible"), 4000);
+      setTimeout(() => document.getElementById("line16").classList.add("visible"), 5500);
+      setTimeout(() => document.getElementById("line17").classList.add("visible"), 7000);
+    }
+    function showScene5() {
+      document.getElementById("scene4").classList.add("hidden");
+      document.getElementById("scene5").classList.remove("hidden");
+      setTimeout(() => document.getElementById("line18").classList.add("visible"), 1000);
+      setTimeout(() => document.getElementById("line19").classList.add("visible"), 2500);
+      setTimeout(() => document.getElementById("line20").classList.add("visible"), 4000);
+      setTimeout(() => document.getElementById("line21").classList.add("visible"), 5500);
+      setTimeout(() => document.getElementById("line22").classList.add("visible"), 7000);
+      setTimeout(() => document.getElementById("line23").classList.add("visible"), 8500);
+      setTimeout(() => document.getElementById("line24").classList.add("visible"), 10000);
+      setTimeout(() => document.getElementById("line25").classList.add("visible"), 11500);
+      setTimeout(() => document.getElementById("line26").classList.add("visible"), 13000);
+      setTimeout(() => document.getElementById("line27").classList.add("visible"), 14500);
+    }
   </script>
 </body>
 </html>
+
